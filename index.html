@@ -123,6 +123,7 @@
     display:flex; align-items:center; justify-content:space-between;
     padding:18px 32px;
     max-width:1240px; margin:0 auto;
+    gap:16px;
   }
   .logo{
     display:flex; align-items:center; gap:10px;
@@ -157,6 +158,8 @@
   }
   .nav-links a:hover::after{ width:100%; }
 
+  .nav-ctas{ display:flex; align-items:center; gap:10px; }
+
   .btn{
     display:inline-flex; align-items:center; gap:8px;
     padding:11px 22px;
@@ -176,6 +179,12 @@
   .btn-primary:hover{ transform:translateY(-2px); box-shadow:0 14px 36px -8px var(--mint-glow); }
   .btn-ghost{ color:var(--ink-000); background:rgba(124,255,214,0.05); }
   .btn-ghost:hover{ background:rgba(124,255,214,0.12); border-color:var(--mint-500); }
+  .btn-link{
+    background:rgba(124,255,214,0.05);
+    color:var(--ink-000);
+  }
+  .btn-link:hover{ background:rgba(124,255,214,0.12); border-color:var(--mint-500); }
+  .btn svg{ flex-shrink:0; }
 
   /* ---------- hero ---------- */
   .hero{
@@ -321,6 +330,16 @@
     width:6px; height:1.5px; background:var(--mint-500);
   }
   .feature-card li b{ color:var(--ink-100); font-weight:600; }
+  .feature-card .card-cta{
+    margin-top:18px;
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:13.5px; font-weight:600; color:var(--mint-300);
+    padding:9px 16px; border-radius:100px;
+    border:1px solid var(--line-strong);
+    background:rgba(124,255,214,0.05);
+    transition:all .25s var(--ease);
+  }
+  .feature-card .card-cta:hover{ background:rgba(124,255,214,0.12); border-color:var(--mint-500); }
 
   /* ---------- personas ---------- */
   .persona-grid{
@@ -431,6 +450,53 @@
   .phone-bar{ height:6px; border-radius:4px; background:rgba(124,255,214,0.08); overflow:hidden; }
   .phone-bar i{ display:block; height:100%; background:linear-gradient(90deg, var(--mint-700), var(--mint-300)); }
 
+  /* ---------- command link panel ---------- */
+  .command-panel{
+    background:linear-gradient(160deg, rgba(124,255,214,0.07), rgba(124,255,214,0.01));
+    border:1px solid var(--line-strong);
+    border-radius:var(--radius-lg);
+    padding:40px;
+    display:grid;
+    grid-template-columns:1.2fr 0.8fr;
+    gap:40px;
+    align-items:center;
+  }
+  .command-panel h3{ font-size:24px; margin-bottom:14px; }
+  .command-panel p{ color:var(--ink-400); font-size:15px; line-height:1.65; margin-bottom:10px; }
+  .command-steps{ display:flex; flex-direction:column; gap:10px; margin:18px 0 26px; }
+  .command-step{
+    display:flex; align-items:flex-start; gap:12px;
+    font-size:14px; color:var(--ink-100);
+  }
+  .command-step span.si{
+    font-family:'JetBrains Mono', monospace;
+    color:var(--mint-500);
+    font-size:12px;
+    min-width:20px;
+    padding-top:2px;
+  }
+  .command-panel-side{
+    border:1px solid var(--line);
+    border-radius:var(--radius-md);
+    padding:26px;
+    background:rgba(0,0,0,0.15);
+  }
+  .command-panel-side .os-row{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:10px 0; border-bottom:1px solid var(--line);
+    font-size:13px; color:var(--ink-400);
+  }
+  .command-panel-side .os-row:last-child{ border-bottom:none; }
+  .command-panel-side .os-row b{ color:var(--ink-100); font-weight:500; }
+  .badge-req{
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px; letter-spacing:.04em;
+    color:var(--mint-300);
+    background:rgba(11,224,165,0.08);
+    border:1px solid var(--line-strong);
+    padding:3px 9px; border-radius:100px;
+  }
+
   /* ---------- download / CTA ---------- */
   .cta{
     text-align:center;
@@ -445,7 +511,9 @@
     border:1px solid var(--line-strong);
     background:rgba(124,255,214,0.04);
     font-size:13px;
+    transition:all .3s var(--ease);
   }
+  .store-badge:hover{ border-color:var(--mint-500); transform:translateY(-2px); }
   .store-badge b{ display:block; font-family:'Outfit'; font-size:16px; color:var(--ink-000); }
   .store-badge small{ color:var(--ink-600); }
 
@@ -470,11 +538,13 @@
     .why-grid{ grid-template-columns:1fr; }
     .nav-links{ display:none; }
     .terminal{ transform:none; }
+    .command-panel{ grid-template-columns:1fr; }
   }
   @media (max-width:560px){
     .persona-grid{ grid-template-columns:1fr; }
     .wrap{ padding:0 20px; }
     nav{ padding:16px 20px; }
+    .store-badges{ flex-direction:column; align-items:stretch; }
   }
 
   @media (prefers-reduced-motion: reduce){
@@ -498,9 +568,16 @@
       <a href="#features">Features</a>
       <a href="#personas">Who It's For</a>
       <a href="#why">Why Sereon</a>
+      <a href="#command-link">Command Link</a>
       <a href="#showcase">Showcase</a>
     </div>
-    <a href="https://play.google.com/store/apps/details?id=com.aronmickolabs.sereon" target="_blank" rel="noopener" class="btn btn-primary">Get Sereon</a>
+    <div class="nav-ctas">
+      <a href="https://drive.google.com/drive/folders/1Y61_gd6zF1RAA-FemMF68OOQOsevNb7m?usp=sharing" target="_blank" rel="noopener" class="btn btn-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Command Link
+      </a>
+      <a href="https://play.google.com/store/apps/details?id=com.aronmickolabs.sereon" target="_blank" rel="noopener" class="btn btn-primary">Get Sereon</a>
+    </div>
   </nav>
 </header>
 
@@ -577,6 +654,22 @@
           <li><b>Base64 Encoder/Decoder</b>: quickly encode or decode data</li>
           <li><b>Server Health Checker</b>: monitor server status and uptime</li>
         </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 5h16v10H4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 20h6M12 15v5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 9l2 2 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Command Link (Remote Control)</h3>
+        <ul>
+          <li>Pair Sereon with the desktop Command Link app to control a PC remotely</li>
+          <li>Works on <b>Windows</b> laptops and desktops</li>
+          <li>Required for remote control features to function</li>
+        </ul>
+        <a class="card-cta" href="https://drive.google.com/drive/folders/1Y61_gd6zF1RAA-FemMF68OOQOsevNb7m?usp=sharing" target="_blank" rel="noopener">
+          Download Command Link
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7v9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
       </div>
 
       <div class="feature-card">
@@ -660,6 +753,36 @@
     </div>
   </section>
 
+  <!-- COMMAND LINK -->
+  <section id="command-link" class="wrap">
+    <div class="section-head">
+      <span class="section-tag">Remote Control</span>
+      <h2>Command Link: control a PC straight from Sereon.</h2>
+      <p>To use Sereon's remote control features, install the free Command Link desktop companion on the Windows PC or laptop you want to control.</p>
+    </div>
+
+    <div class="command-panel">
+      <div>
+        <h3>Set up remote control in three steps</h3>
+        <div class="command-steps">
+          <div class="command-step"><span class="si">01</span> Download Command Link from Google Drive on the target Windows PC or laptop.</div>
+          <div class="command-step"><span class="si">02</span> Install and run it &mdash; it stays active in the background, ready to accept a connection.</div>
+          <div class="command-step"><span class="si">03</span> Open Sereon on your phone, tap <b>Command Link</b>, and connect to that PC to start remote control.</div>
+        </div>
+        <a href="https://drive.google.com/drive/folders/1Y61_gd6zF1RAA-FemMF68OOQOsevNb7m?usp=sharing" target="_blank" rel="noopener" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Download Command Link (Google Drive)
+        </a>
+      </div>
+      <div class="command-panel-side">
+        <div class="os-row"><b>Platform</b> <span class="badge-req">Windows PC/Laptop/Desktop</span></div>
+        <div class="os-row"><span>Distribution</span><b>Google Drive folder</b></div>
+        <div class="os-row"><span>Required for</span><b>Remote control button</b></div>
+        <div class="os-row"><span>Cost</span><b>Free</b></div>
+      </div>
+    </div>
+  </section>
+
   <!-- SHOWCASE -->
   <section id="showcase" class="wrap">
     <div class="section-head">
@@ -702,6 +825,16 @@
       <div class="phone">
         <div class="phone-notch"></div>
         <div class="phone-screen">
+          <div class="phone-label">Command Link</div>
+          <div class="phone-row"><span>Target PC</span><span class="stat">Online</span></div>
+          <div class="phone-row"><span>Connection</span><span class="stat">Secure</span></div>
+          <div class="phone-row"><span>Status</span><span class="stat">Connected</span></div>
+          <div class="phone-bar"><i style="width:100%"></i></div>
+        </div>
+      </div>
+      <div class="phone">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
           <div class="phone-label">Executive Report</div>
           <div class="phone-row"><span>Format</span><span class="stat">PDF</span></div>
           <div class="phone-row"><span>Sections</span><span class="stat">4</span></div>
@@ -716,11 +849,15 @@
   <section id="download" class="cta wrap">
     <span class="eyebrow">Developed by Aron Micko Labs</span>
     <h2>Download Sereon and bring<br>professional IT diagnostics to your pocket.</h2>
-    <p>Available now on Google Play. Free to download.</p>
+    <p>Available now on Google Play. Free to download. Install Command Link on your PC to unlock remote control.</p>
     <div class="store-badges">
       <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.aronmickolabs.sereon" target="_blank" rel="noopener">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M3 3l11 9-11 9V3z" fill="#0BE0A5"/><path d="M14 12l4-2.3L21 12l-3 2.3L14 12z" fill="#7CFFD6"/></svg>
-        <span><b>Google Play</b><small>Get it now</small></span>
+        <span><b>Google Play</b><small>Get Sereon (mobile)</small></span>
+      </a>
+      <a class="store-badge" href="https://drive.google.com/drive/folders/1Y61_gd6zF1RAA-FemMF68OOQOsevNb7m?usp=sharing" target="_blank" rel="noopener">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 5h16v10H4z" stroke="#0BE0A5" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 20h6M12 15v5" stroke="#0BE0A5" stroke-width="1.6" stroke-linecap="round"/><path d="M8 9l2 2 4-4" stroke="#7CFFD6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span><b>Command Link</b><small>Windows desktop app</small></span>
       </a>
     </div>
   </section>
@@ -734,6 +871,7 @@
       <a href="#features">Features</a>
       <a href="#personas">Who It's For</a>
       <a href="#why">Why Sereon</a>
+      <a href="#command-link">Command Link</a>
     </div>
   </div>
 </footer>
