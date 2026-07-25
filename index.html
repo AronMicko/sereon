@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
 <title>Sereon | Professional IT Diagnostics</title>
+<link rel="icon" type="image/png" href="sereon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -137,17 +138,12 @@
   }
   .logo-mark{
     width:28px; height:28px; border-radius:9px;
-    background:linear-gradient(145deg, var(--mint-300), var(--mint-700));
+    overflow:hidden;
     box-shadow:0 0 22px var(--mint-glow);
     position:relative;
     flex:none;
-  }
-  .logo-mark::after{
-    content:"";
-    position:absolute; inset:8px;
-    border-radius:4px;
-    background:var(--void);
-    clip-path: polygon(0 0, 60% 0, 100% 100%, 40% 100%);
+    display:block;
+    object-fit:cover;
   }
   .nav-links{
     display:flex; gap:32px;
@@ -505,10 +501,14 @@
     width:100%; height:100%;
     background:var(--void);
     border-radius:18px;
-    padding:20px 14px 14px;
-    display:flex; flex-direction:column; gap:10px;
     border:1px solid var(--line);
     overflow:hidden;
+  }
+  .phone-screen img{
+    width:100%; height:100%;
+    object-fit:cover;
+    object-position:top center;
+    display:block;
   }
   .phone-notch{
     position:absolute; top:24px; left:50%; transform:translateX(-50%);
@@ -670,7 +670,7 @@
 
 <header>
   <nav>
-    <div class="logo"><span class="logo-mark"></span> Sereon</div>
+    <div class="logo"><img src="sereon.png" alt="Sereon logo" class="logo-mark"> Sereon</div>
     <div class="nav-links">
       <a href="#tools">Tools</a>
       <a href="#personas">Who It's For</a>
@@ -942,70 +942,45 @@
   <section id="showcase" class="wrap">
     <div class="section-head">
       <span class="section-tag">Inside the App</span>
-      <h2>A concept look at the Sereon interface.</h2>
-      <p>Illustrative mockups of the dark, mint accented UI described in the app's own listing, not actual app screenshots.</p>
+      <h2>A real look at the Sereon interface.</h2>
+      <p>Actual screenshots from the app, showing the dark, mint accented UI in daily use.</p>
     </div>
     <div class="showcase-track">
       <div class="phone">
         <div class="phone-notch"></div>
-        <div class="phone-screen">
-          <div class="phone-label">Ping Tool</div>
-          <div class="phone-row"><span>8.8.8.8</span><span class="stat">14ms</span></div>
-          <div class="phone-row"><span>Packets sent</span><span class="stat">4/4</span></div>
-          <div class="phone-bar"><i style="width:92%"></i></div>
-          <div class="phone-label" style="margin-top:auto;">Status</div>
-          <div class="phone-row"><span>Host reachable</span><span class="stat">OK</span></div>
-        </div>
+        <div class="phone-screen"><img src="1.jpg" alt="Sereon app screenshot 1" loading="lazy"></div>
       </div>
       <div class="phone">
         <div class="phone-notch"></div>
-        <div class="phone-screen">
-          <div class="phone-label">Port Checker</div>
-          <div class="phone-row"><span>Port 443</span><span class="stat">OPEN</span></div>
-          <div class="phone-row"><span>Port 22</span><span class="stat">OPEN</span></div>
-          <div class="phone-row"><span>Port 21</span><span class="stat">CLOSED</span></div>
-          <div class="phone-bar"><i style="width:60%"></i></div>
-        </div>
+        <div class="phone-screen"><img src="2.jpg" alt="Sereon app screenshot 2" loading="lazy"></div>
       </div>
       <div class="phone">
         <div class="phone-notch"></div>
-        <div class="phone-screen">
-          <div class="phone-label">Subnet Calculator</div>
-          <div class="phone-row"><span>Network</span><span class="stat">/24</span></div>
-          <div class="phone-row"><span>Usable hosts</span><span class="stat">254</span></div>
-          <div class="phone-row"><span>Broadcast</span><span class="stat">.255</span></div>
-          <div class="phone-bar"><i style="width:70%"></i></div>
-        </div>
+        <div class="phone-screen"><img src="3.jpg" alt="Sereon app screenshot 3" loading="lazy"></div>
       </div>
       <div class="phone">
         <div class="phone-notch"></div>
-        <div class="phone-screen">
-          <div class="phone-label">DNS Lookup</div>
-          <div class="phone-row"><span>A record</span><span class="stat">1 found</span></div>
-          <div class="phone-row"><span>MX record</span><span class="stat">2 found</span></div>
-          <div class="phone-row"><span>TTL</span><span class="stat">3600s</span></div>
-          <div class="phone-bar"><i style="width:80%"></i></div>
-        </div>
+        <div class="phone-screen"><img src="4.jpg" alt="Sereon app screenshot 4" loading="lazy"></div>
       </div>
       <div class="phone">
         <div class="phone-notch"></div>
-        <div class="phone-screen">
-          <div class="phone-label">Remote Control</div>
-          <div class="phone-row"><span>PC Screen</span><span class="stat">Linked</span></div>
-          <div class="phone-row"><span>Voice Sync</span><span class="stat">Active</span></div>
-          <div class="phone-row"><span>Trackpad</span><span class="stat">Ready</span></div>
-          <div class="phone-bar"><i style="width:88%"></i></div>
-        </div>
+        <div class="phone-screen"><img src="5.jpg" alt="Sereon app screenshot 5" loading="lazy"></div>
       </div>
       <div class="phone">
         <div class="phone-notch"></div>
-        <div class="phone-screen">
-          <div class="phone-label">Executive Report</div>
-          <div class="phone-row"><span>Format</span><span class="stat">PDF</span></div>
-          <div class="phone-row"><span>Sections</span><span class="stat">4</span></div>
-          <div class="phone-row"><span>Status</span><span class="stat">Ready</span></div>
-          <div class="phone-bar"><i style="width:100%"></i></div>
-        </div>
+        <div class="phone-screen"><img src="6.jpg" alt="Sereon app screenshot 6" loading="lazy"></div>
+      </div>
+      <div class="phone">
+        <div class="phone-notch"></div>
+        <div class="phone-screen"><img src="7.jpg" alt="Sereon app screenshot 7" loading="lazy"></div>
+      </div>
+      <div class="phone">
+        <div class="phone-notch"></div>
+        <div class="phone-screen"><img src="8.jpg" alt="Sereon app screenshot 8" loading="lazy"></div>
+      </div>
+      <div class="phone">
+        <div class="phone-notch"></div>
+        <div class="phone-screen"><img src="9.jpg" alt="Sereon app screenshot 9" loading="lazy"></div>
       </div>
     </div>
   </section>
