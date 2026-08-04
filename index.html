@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
-<title>Sereon | Professional IT Diagnostics</title>
+<title>Sereon | IT Diagnostics &amp; Accounting Suite</title>
 <link rel="icon" type="image/png" href="sereon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -146,7 +146,7 @@
     object-fit:cover;
   }
   .nav-links{
-    display:flex; gap:32px;
+    display:flex; gap:28px;
     font-size:14px; font-weight:500;
     color:var(--ink-400);
   }
@@ -672,7 +672,8 @@
   <nav>
     <div class="logo"><img src="sereon.png" alt="Sereon logo" class="logo-mark"> Sereon</div>
     <div class="nav-links">
-      <a href="#tools">Tools</a>
+      <a href="#tools">IT Tools</a>
+      <a href="#accounting">Accounting</a>
       <a href="#personas">Who It's For</a>
       <a href="#why">Why Sereon</a>
       <a href="#value">Value</a>
@@ -684,7 +685,8 @@
     </div>
   </nav>
   <div class="mobile-panel" id="mobilePanel">
-    <a href="#tools">Tools</a>
+    <a href="#tools">IT Tools</a>
+    <a href="#accounting">Accounting</a>
     <a href="#personas">Who It's For</a>
     <a href="#why">Why Sereon</a>
     <a href="#value">Value</a>
@@ -699,13 +701,15 @@
     <div>
       <span class="eyebrow">Available on Google Play</span>
       <h1 id="heroTitle"></h1>
-      <p class="lead">Sereon is a complete IT analyst toolkit built for IT managers, network engineers, and technology leaders who need fast, accurate diagnostics on the go. 42 tools across networking, security, development, and remote support, all in one clean, dark themed app that fits real daily operations, not just demos.</p>
+      <p class="lead">Sereon is a complete IT analyst toolkit built for IT managers, network engineers, and technology leaders who need fast, accurate diagnostics on the go, now paired with a full Accounting Suite for Philippine tax, payroll, and bookkeeping work. Switch modes right from the home screen and get 75 tools in total, all in one clean app that fits real daily operations, not just demos.</p>
       <div class="hero-ctas">
         <a href="https://play.google.com/store/apps/details?id=com.aronmickolabs.sereon" target="_blank" rel="noopener" class="btn btn-primary">Download on Google Play</a>
-        <a href="#tools" class="btn btn-ghost">Explore the toolkit</a>
+        <a href="#tools" class="btn btn-ghost">Explore IT toolkit</a>
+        <a href="#accounting" class="btn btn-ghost">Explore Accounting Suite</a>
       </div>
       <div class="hero-meta">
-        <div><strong>42</strong> diagnostic and utility tools</div>
+        <div><strong>42</strong> IT diagnostic and utility tools</div>
+        <div><strong>33</strong> accounting, tax and payroll tools</div>
         <div><strong>PDF, RTF, TXT</strong> report export</div>
         <div><strong>On device</strong> processing</div>
       </div>
@@ -723,9 +727,9 @@
   <!-- TOOLS -->
   <section id="tools" class="wrap">
     <div class="section-head">
-      <span class="section-tag">The Complete Toolkit</span>
+      <span class="section-tag">The Complete IT Toolkit</span>
       <h2>Every tool an IT team reaches for, built into one app.</h2>
-      <p>Six toolsets, one interface, zero app switching. What used to take a laptop, a terminal, and three browser tabs now fits in one pocket sized workflow, ready whenever a ticket comes in.</p>
+      <p>Six toolsets, one interface, zero app switching. What used to take a laptop, a terminal, and three browser tabs now fits in one pocket sized workflow, ready whenever a ticket comes in. This IT toolkit sits behind a PIN inside the app, so it stays separate from the Accounting Suite below.</p>
     </div>
 
     <div class="category-grid" id="categoryGrid">
@@ -854,7 +858,7 @@
     <div class="stats-strip">
       <div class="stat-box">
         <div class="stat-num">42</div>
-        <div class="stat-label">tools in one app, no separate subscriptions to manage</div>
+        <div class="stat-label">IT tools in one app, no separate subscriptions to manage</div>
       </div>
       <div class="stat-box">
         <div class="stat-num">6</div>
@@ -867,6 +871,150 @@
       <div class="stat-box">
         <div class="stat-num">0</div>
         <div class="stat-label">raw diagnostic data leaves the device during processing</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCOUNTING -->
+  <section id="accounting" class="wrap">
+    <div class="section-head">
+      <span class="section-tag">Also Inside Sereon</span>
+      <h2>A full Accounting Suite for Philippine tax, payroll, and bookkeeping.</h2>
+      <p>Switch to Accounting mode right from the home screen to unlock a complete, no-PIN-required set of tools built around Philippine tax rules, payroll computations, and everyday bookkeeping, plus one-tap links to official government and finance websites so rates and deadlines are always current.</p>
+    </div>
+
+    <div class="category-grid" id="accountingGrid">
+
+      <div class="category-card">
+        <div class="category-top">
+          <div class="feature-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 3h9l5 5v13H6V3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12h6M9 16h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Tax</h3>
+        </div>
+        <div class="category-count">5 tools</div>
+        <div class="chip-row">
+          <span class="chip">VAT Calculator</span>
+          <span class="chip">Percentage Tax</span>
+          <span class="chip">Withholding Tax</span>
+          <span class="chip">Income Tax Estimator</span>
+          <span class="chip">Tax Deadline Tracker</span>
+        </div>
+      </div>
+
+      <div class="category-card">
+        <div class="category-top">
+          <div class="feature-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="currentColor" stroke-width="1.6"/><path d="M5 20c1.2-4 4-6 7-6s5.8 2 7 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Payroll</h3>
+        </div>
+        <div class="category-count">7 tools</div>
+        <div class="chip-row">
+          <span class="chip">SSS Contribution</span>
+          <span class="chip">PhilHealth Contribution</span>
+          <span class="chip">Pag-IBIG Contribution</span>
+          <span class="chip">13th Month Pay</span>
+          <span class="chip">Net Pay Computation</span>
+          <span class="chip">Overtime &amp; Holiday Pay</span>
+          <span class="chip">De Minimis Tracker</span>
+        </div>
+      </div>
+
+      <div class="category-card">
+        <div class="category-top">
+          <div class="feature-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 20V10M11 20V4M18 20v-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Financial Analysis</h3>
+        </div>
+        <div class="category-count">8 tools</div>
+        <div class="chip-row">
+          <span class="chip">Financial Ratio Analyzer</span>
+          <span class="chip">Break-Even Analysis</span>
+          <span class="chip">Depreciation Calculator</span>
+          <span class="chip">Loan Amortization</span>
+          <span class="chip">Interest Calculator</span>
+          <span class="chip">Cash Flow Builder</span>
+          <span class="chip">Budget vs Actual</span>
+          <span class="chip">ROI Calculator</span>
+        </div>
+      </div>
+
+      <div class="category-card">
+        <div class="category-top">
+          <div class="feature-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 5a2 2 0 012-2h9l5 5v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 10h8M8 14h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Bookkeeping</h3>
+        </div>
+        <div class="category-count">8 tools</div>
+        <div class="chip-row">
+          <span class="chip">Journal Entry Builder</span>
+          <span class="chip">General Ledger</span>
+          <span class="chip">Trial Balance Checker</span>
+          <span class="chip">AR Aging Report</span>
+          <span class="chip">AP Aging Report</span>
+          <span class="chip">Bank Reconciliation</span>
+          <span class="chip">Petty Cash Tracker</span>
+          <span class="chip">Fixed Asset Register</span>
+        </div>
+      </div>
+
+      <div class="category-card">
+        <div class="category-top">
+          <div class="feature-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M3 10h18" stroke="currentColor" stroke-width="1.6"/></svg>
+          </div>
+          <h3>Utilities</h3>
+        </div>
+        <div class="category-count">5 tools</div>
+        <div class="chip-row">
+          <span class="chip">Invoice Generator</span>
+          <span class="chip">Official Receipt Tracker</span>
+          <span class="chip">Currency Converter</span>
+          <span class="chip">Amount to Words</span>
+          <span class="chip">Report Exporter</span>
+        </div>
+      </div>
+
+      <div class="category-card">
+        <div class="category-top">
+          <div class="feature-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M3 12h18M12 3c2.6 2.6 4 5.7 4 9s-1.4 6.4-4 9c-2.6-2.6-4-5.7-4-9s1.4-6.4 4-9z" stroke="currentColor" stroke-width="1.6"/></svg>
+          </div>
+          <h3>Official Gov &amp; Finance Links</h3>
+        </div>
+        <div class="category-count">7 quick links</div>
+        <div class="chip-row">
+          <span class="chip">BIR</span>
+          <span class="chip">SSS</span>
+          <span class="chip">PhilHealth</span>
+          <span class="chip">Pag-IBIG</span>
+          <span class="chip">DOF</span>
+          <span class="chip">SEC</span>
+          <span class="chip">DTI</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="stats-strip">
+      <div class="stat-box">
+        <div class="stat-num">33</div>
+        <div class="stat-label">accounting, tax and payroll tools in the Accounting Suite</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">5</div>
+        <div class="stat-label">toolsets: tax, payroll, financial analysis, bookkeeping, utilities</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">7</div>
+        <div class="stat-label">official government and finance sites, opened live, one tap away</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">75</div>
+        <div class="stat-label">total tools across the IT and Accounting suites combined</div>
       </div>
     </div>
   </section>
@@ -890,13 +1038,13 @@
       </div>
       <div class="persona-card">
         <span class="persona-num">03</span>
-        <h4>CEOs and Business Owners</h4>
-        <p>Read clear, exportable reports that explain network health in plain language, no technical jargon required.</p>
+        <h4>Bookkeepers and Accountants</h4>
+        <p>Compute VAT, withholding tax, and payroll contributions, then track ledgers and aging reports without switching apps.</p>
       </div>
       <div class="persona-card">
         <span class="persona-num">04</span>
-        <h4>Freelance IT Consultants</h4>
-        <p>Manage several client networks from a single device and hand over professional documentation on the spot.</p>
+        <h4>CEOs and Business Owners</h4>
+        <p>Read clear, exportable reports that explain network health and financial status in plain language, no technical jargon required.</p>
       </div>
     </div>
   </section>
@@ -917,14 +1065,14 @@
           <span class="num">01</span>
           <div>
             <h4>Everything essential, combined</h4>
-            <p>Sereon brings 42 diagnostic and utility tools into a single, clean, dark themed app, so IT teams stop juggling separate apps, browser tabs, and command line utilities just to finish one task.</p>
+            <p>Sereon brings 42 IT diagnostic tools and a 33-tool Accounting Suite into a single, clean, dark themed app, so teams stop juggling separate apps, browser tabs, and spreadsheets just to finish one task.</p>
           </div>
         </div>
         <div class="why-item">
           <span class="num">02</span>
           <div>
             <h4>Private by design</h4>
-            <p>All processing happens locally on the device. Client data, network details, and diagnostic results stay under the user's control, which matters for consultants working with sensitive infrastructure.</p>
+            <p>All processing happens locally on the device. Client data, network details, and diagnostic results stay under the user's control, which matters for consultants working with sensitive infrastructure or financial records.</p>
           </div>
         </div>
         <div class="why-item">
@@ -998,15 +1146,15 @@
         <span class="value-card-tag">Trust and Proof</span>
         <div class="value-line">
           <div class="value-phrase">On device processing</div>
-          <div class="value-note">Client network data never leaves the device, the top concern of any IT consultant.</div>
+          <div class="value-note">Client network and financial data never leaves the device, the top concern of any IT or accounting consultant.</div>
         </div>
         <div class="value-line">
           <div class="value-phrase">0 raw data leaves the device</div>
           <div class="value-note">A privacy claim you can measure, not just a generic word like secure.</div>
         </div>
         <div class="value-line">
-          <div class="value-phrase">42 tools, 6 toolsets</div>
-          <div class="value-note">Specific numbers, easier to trust than a vague promise of many tools.</div>
+          <div class="value-phrase">75 tools, 2 suites</div>
+          <div class="value-note">Specific numbers across IT and Accounting, easier to trust than a vague promise of many tools.</div>
         </div>
       </div>
 
@@ -1018,7 +1166,7 @@
         </div>
         <div class="value-line">
           <div class="value-phrase">One pocket sized workflow</div>
-          <div class="value-note">What used to take a laptop, a terminal, and three browser tabs, now fits in one place.</div>
+          <div class="value-note">What used to take a laptop, a terminal, three browser tabs, and a spreadsheet, now fits in one place.</div>
         </div>
         <div class="value-line">
           <div class="value-phrase">Ready for the next ticket</div>
@@ -1030,7 +1178,7 @@
         <span class="value-card-tag">Client-Facing Value</span>
         <div class="value-line">
           <div class="value-phrase">Reports that speak to anyone</div>
-          <div class="value-note">The main gap in most diagnostic apps: no client-facing export at all.</div>
+          <div class="value-note">The main gap in most diagnostic and accounting apps: no client-facing export at all.</div>
         </div>
         <div class="value-line">
           <div class="value-phrase">No translation needed</div>
@@ -1045,8 +1193,8 @@
       <div class="value-card">
         <span class="value-card-tag">Positioning</span>
         <div class="value-line">
-          <div class="value-phrase">Keeps networks running</div>
-          <div class="value-note">Puts the IT professional's role front and center, not just the software.</div>
+          <div class="value-phrase">Keeps networks and finances running</div>
+          <div class="value-note">Puts the IT or accounting professional's role front and center, not just the software.</div>
         </div>
         <div class="value-line">
           <div class="value-phrase">Built for daily operations</div>
@@ -1056,14 +1204,14 @@
     </div>
 
     <div class="value-footnote">
-      <p><strong>For business owners:</strong> Sereon is a tool for the IT team, not something the owner opens directly. The value reaches the business through faster resolutions and clearer reporting, not through hands-on use of the app itself.</p>
+      <p><strong>For business owners:</strong> Sereon is a tool for the IT and accounting team, not something the owner opens directly. The value reaches the business through faster resolutions and clearer reporting, not through hands-on use of the app itself.</p>
     </div>
   </section>
 
   <!-- DOWNLOAD -->
   <section id="download" class="cta wrap">
     <span class="eyebrow">Developed by Aron Micko Labs</span>
-    <h2>Download Sereon and bring<br>professional IT diagnostics to your pocket.</h2>
+    <h2>Download Sereon and bring<br>professional IT and accounting tools to your pocket.</h2>
     <p>Available now on Google Play. Free to download, and built to earn a permanent spot in your team's daily toolkit.</p>
     <div class="store-badges">
       <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.aronmickolabs.sereon" target="_blank" rel="noopener">
@@ -1079,7 +1227,8 @@
   <div class="wrap footer-row">
     <div>&copy; 2026 Aron Micko Labs. All rights reserved.</div>
     <div class="footer-links">
-      <a href="#tools">Tools</a>
+      <a href="#tools">IT Tools</a>
+      <a href="#accounting">Accounting</a>
       <a href="#personas">Who It's For</a>
       <a href="#why">Why Sereon</a>
     </div>
@@ -1091,7 +1240,7 @@
   (function(){
     const el = document.getElementById('heroTitle');
     const parts = [
-      { text: 'The future of IT operations,', grad: false },
+      { text: 'IT operations and accounting,', grad: false },
       { text: 'built into one app.', grad: true }
     ];
     let delay = 0;
@@ -1133,6 +1282,11 @@
     { html: '<span class="muted">usable hosts .... 254</span>', pause: 180 },
     { html: '<span class="muted">broadcast ....... 192.168.1.255</span>', pause: 180 },
     { html: '<span class="ok">&#10003; subnet calculated</span>', pause: 550 },
+    { html: '', pause: 200 },
+    { html: '<span class="prompt">sereon@vat</span> <span class="path">~</span> $ compute --sale 50000 --rate 12%', pause: 400 },
+    { html: '<span class="muted">vat amount ...... 6000.00</span>', pause: 180 },
+    { html: '<span class="muted">total ........... 56000.00</span>', pause: 180 },
+    { html: '<span class="ok">&#10003; VAT computed</span>', pause: 550 },
     { html: '', pause: 200 },
     { html: '<span class="prompt">sereon@report</span> <span class="path">~</span> $ export --format pdf', pause: 400 },
     { html: '<span class="ok">&#10003; executive-report.pdf generated</span>', pause: 700 },
